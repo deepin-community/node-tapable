@@ -1,0 +1,78 @@
+node-tapable (1.0.0-6) unstable; urgency=medium
+
+  * Team upload
+  * Modernize debian/watch
+  * Fix GitHub tags regex
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix filenamemangle
+  * Add .npmignore to drop test files
+  * Enable upstream test (jest+babel-jest) and fix test for recent jest
+
+ -- Yadd <yadd@debian.org>  Thu, 04 Nov 2021 13:53:11 +0100
+
+node-tapable (1.0.0-5) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.0, no changes needed.
+  * Apply multi-arch hints. + node-tapable: Add Multi-Arch: foreign.
+
+  [ Yadd ]
+  * Bump debhelper compatibility level to 13
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Use dh-sequence-nodejs
+  * Modernize debian/watch
+  * Fix GitHub tags regex
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix filenamemangle
+
+ -- Yadd <yadd@debian.org>  Thu, 04 Nov 2021 13:37:14 +0100
+
+node-tapable (1.0.0-4) unstable; urgency=medium
+
+  * Add Breaks: webpack (<< 4.0)
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 05 Aug 2019 14:37:44 +0000
+
+node-tapable (1.0.0-3) unstable; urgency=medium
+
+  * Add Breaks for node-enhanced-resolve (<< 4.1)
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 05 Aug 2019 06:40:28 +0000
+
+node-tapable (1.0.0-2) unstable; urgency=medium
+
+  * Reupload to unstable
+  * Bump Standards-Version to 4.4.0 (no changes needed)
+  * Switch to pkg-js-tools auto install
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 04 Aug 2019 09:30:53 +0000
+
+node-tapable (1.0.0-1) experimental; urgency=medium
+
+  * New upstream version 1.0.0
+  * Bump debhelper compatibility level to 11
+  * Use salsa.debian.org in Vcs-* fields
+  * Change section to javascript
+  * Bump Standards-Version to 4.2.1 (no changes needed)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 12 Sep 2018 15:55:40 +0530
+
+node-tapable (0.2.8-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 13 Sep 2017 21:09:57 +0530
+
+node-tapable (0.2.6-1) unstable; urgency=low
+
+  * Initial release (Closes: #805912)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 12 Apr 2017 10:56:42 +0530

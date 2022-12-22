@@ -1,0 +1,9 @@
+Description: don't install test files
+Author: Yadd <yadd@debian.org>
+Forwarded: no
+Last-Update: 2021-11-04
+
+--- /dev/null
++++ b/.npmignore
+@@ -0,0 +1 @@
++lib/__tests__
