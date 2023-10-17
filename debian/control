@@ -6,7 +6,7 @@ Uploaders: Pirate Praveen <praveen@debian.org>
 Build-Depends: debhelper-compat (= 13)
  , dh-sequence-nodejs
  , jest <!nocheck>
-Standards-Version: 4.6.0
+Standards-Version: 4.6.2
 Homepage: https://github.com/webpack/tapable
 Vcs-Git: https://salsa.debian.org/js-team/node-tapable.git
 Vcs-Browser: https://salsa.debian.org/js-team/node-tapable
@@ -16,7 +16,7 @@ Rules-Requires-Root: no
 Package: node-tapable
 Architecture: all
 Depends: ${misc:Depends}
-Breaks: node-enhanced-resolve (<< 4.1~), webpack (<< 4.0~)
+Breaks: node-enhanced-resolve (<< 5.0~), webpack (<< 5.0~)
 Multi-Arch: foreign
 Description: just a little module for plugins
  Tapable is a class for plugin binding and applying.

@@ -1,2 +1,3 @@
-fix-test.patch
 dont-install-test-files.patch
+remove-prettier.patch
+update-snapshots.patch

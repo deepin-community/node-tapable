@@ -1,0 +1,88 @@
+Description: disabled testing with prettier in implementation
+Author: Ayoyimika Ajibade <ayoyimikaajibade@gmail.com>
+Forwarded: not-needed
+Last-Update: 2022-01-24
+--- a/lib/__tests__/HookCodeFactory.js
++++ b/lib/__tests__/HookCodeFactory.js
+@@ -10,9 +10,6 @@
+ 	new Function("a, b, c", code);
+ };
+ 
+-const pretty = code => {
+-	return require("prettier").format(code, { filepath: "code.js" });
+-};
+ 
+ describe("HookCodeFactory", () => {
+ 	describe("callTap", () => {
+@@ -87,7 +84,6 @@
+ 						onDone: () => "onDone();\n"
+ 					});
+ 					expect(code).toMatchSnapshot();
+-					expect(pretty(code)).toMatchSnapshot();
+ 					expectNoSyntaxError(code);
+ 				});
+ 				it("sync with onResult", () => {
+@@ -96,7 +92,6 @@
+ 						onResult: result => `onResult(${result});\n`
+ 					});
+ 					expect(code).toMatchSnapshot();
+-					expect(pretty(code)).toMatchSnapshot();
+ 					expectNoSyntaxError(code);
+ 				});
+ 				it("async without onResult", () => {
+@@ -105,7 +100,6 @@
+ 						onDone: () => "onDone();\n"
+ 					});
+ 					expect(code).toMatchSnapshot();
+-					expect(pretty(code)).toMatchSnapshot();
+ 					expectNoSyntaxError(code);
+ 				});
+ 				it("async with onResult", () => {
+@@ -114,7 +108,6 @@
+ 						onResult: result => `onResult(${result});\n`
+ 					});
+ 					expect(code).toMatchSnapshot();
+-					expect(pretty(code)).toMatchSnapshot();
+ 					expectNoSyntaxError(code);
+ 				});
+ 				it("promise without onResult", () => {
+@@ -123,7 +116,6 @@
+ 						onDone: () => "onDone();\n"
+ 					});
+ 					expect(code).toMatchSnapshot();
+-					expect(pretty(code)).toMatchSnapshot();
+ 					expectNoSyntaxError(code);
+ 				});
+ 				it("promise with onResult", () => {
+@@ -132,7 +124,6 @@
+ 						onResult: result => `onResult(${result});\n`
+ 					});
+ 					expect(code).toMatchSnapshot();
+-					expect(pretty(code)).toMatchSnapshot();
+ 					expectNoSyntaxError(code);
+ 				});
+ 			});
+@@ -234,7 +225,6 @@
+ 						rethrowIfPossible: true
+ 					});
+ 					expect(code).toMatchSnapshot();
+-					expect(pretty(code)).toMatchSnapshot();
+ 					expectNoSyntaxError(code);
+ 				});
+ 				it("callTapsParallel", () => {
+@@ -246,7 +236,6 @@
+ 						rethrowIfPossible: true
+ 					});
+ 					expect(code).toMatchSnapshot();
+-					expect(pretty(code)).toMatchSnapshot();
+ 					expectNoSyntaxError(code);
+ 				});
+ 				it("callTapsLooping", () => {
+@@ -256,7 +245,6 @@
+ 						rethrowIfPossible: true
+ 					});
+ 					expect(code).toMatchSnapshot();
+-					expect(pretty(code)).toMatchSnapshot();
+ 					expectNoSyntaxError(code);
+ 				});
+ 			});
